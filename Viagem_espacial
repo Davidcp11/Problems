@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+#include <stdio.h>
+
+int main()
+{
+	 unsigned int
+               tiros,
+		 		           d,
+				         i=0,
+		               N,
+				          Xc,
+				          Yc,
+			   	         R,
+			      X1[1000],
+			      X2[1000],
+			      Y1[1000],
+			      Y2[1000];
+	while(i<N)
+	{
+		d=(fabs(Xc*(Y1[i]-Y2[i])+Yc*(X2[i]-X1[i])+X1[i]*Y2[i]-X2[i]*Y1[i]))/(sqrt(pow((Y1[i]-Y2[i]), 2)+ pow((X1[i]-X2[i]), 2)));
+		if(d>R)
+        {
+            i+=1;
+        }
+        else
+        {
+            tiros+=1;
+            i+=1;
+        }
+	}
